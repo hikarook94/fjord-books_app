@@ -1,0 +1,18 @@
+en:
+  button:
+    edit: Edit
+    back: Back
+    show: Show
+    index: Index
+    destroy: Destroy
+    new: New Book
+  title:
+    books: Books
+    new: New Book
+    edit: Editting Book
+  notice:
+    created: 'Book was successfully created.'
+    updated: 'Book was successfully updated.'
+    deleted: 'Book was successfully destroyed.'
+  alert:
+    ensure: 'Are you sure?'

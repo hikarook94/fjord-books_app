@@ -1,0 +1,18 @@
+ja:
+  button:
+    edit: 編集
+    back: 戻る
+    show: 詳細
+    index: 一覧
+    destroy: 削除
+    new: 新規作成
+  title:
+    books: 書籍
+    new: 新規作成
+    edit: 編集
+  notice:
+    created: 作成しました
+    updated: 更新しました
+    deleted: 削除しました
+  alert:
+    ensure: 本当に良いですか？
