@@ -7,12 +7,11 @@ en:
     destroy: Destroy
     new: New Book
   title:
-    books: Books
     new: New Book
     edit: Editting Book
   notice:
-    created: 'Book was successfully created.'
-    updated: 'Book was successfully updated.'
-    deleted: 'Book was successfully destroyed.'
+    created: '%{target} was successfully created.'
+    updated: '%{target} was successfully updated.'
+    deleted: '%{target} was successfully destroyed.'
   alert:
     ensure: 'Are you sure?'

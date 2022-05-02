@@ -7,12 +7,11 @@ ja:
     destroy: 削除
     new: 新規作成
   title:
-    books: 書籍
     new: 新規作成
     edit: 編集
   notice:
-    created: 作成しました
-    updated: 更新しました
-    deleted: 削除しました
+    created: "%{target}を作成しました"
+    updated: "%{target}を更新しました"
+    deleted: "%{target}を削除しました"
   alert:
     ensure: 本当に良いですか？
