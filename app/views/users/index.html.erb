@@ -1,0 +1,20 @@
+<h1><%= User.model_name.human %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= User.human_attribute_name(:user_name) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.user_name %></td>
+        <td><%= link_to '詳細', user %></td>
+      </tr>
+     <% end %>
+  </tbody>
+</table>
+
+<%= paginate @users %>
