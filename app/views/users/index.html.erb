@@ -11,10 +11,11 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.user_name %></td>
-        <td><%= link_to '詳細', user %></td>
+        <td><%= link_to t('views.common.show'), user %></td>
       </tr>
      <% end %>
   </tbody>
 </table>
 
 <%= paginate @users %>
+<%= link_to t('views.common.back'), books_path %>

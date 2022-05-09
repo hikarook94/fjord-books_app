@@ -228,3 +228,10 @@ en:
       notice_create: "%{name} was successfully created."
       notice_update: "%{name} was successfully updated."
       notice_destroy: "%{name} was successfully destroyed."
+  devise:
+    user_logged_in_as:
+      html: "Logged in as <strong>%{user_name}</strong>."
+    edit_profile: "Edit profile"
+    sign_up: "Sign up"
+    logout: Logout
+    login: Login
