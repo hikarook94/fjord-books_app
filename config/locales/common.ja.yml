@@ -1,0 +1,17 @@
+ja:
+  button:
+    edit: 編集
+    back: 戻る
+    show: 詳細
+    index: 一覧
+    destroy: 削除
+    new: 新規作成
+  title:
+    new: 新規作成
+    edit: 編集
+  notice:
+    created: "%{target}を作成しました"
+    updated: "%{target}を更新しました"
+    deleted: "%{target}を削除しました"
+  alert:
+    ensure: 本当に良いですか？

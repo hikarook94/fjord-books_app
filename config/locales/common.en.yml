@@ -1,0 +1,17 @@
+en:
+  button:
+    edit: Edit
+    back: Back
+    show: Show
+    index: Index
+    destroy: Destroy
+    new: New Book
+  title:
+    new: New Book
+    edit: Editting Book
+  notice:
+    created: '%{target} was successfully created.'
+    updated: '%{target} was successfully updated.'
+    deleted: '%{target} was successfully destroyed.'
+  alert:
+    ensure: 'Are you sure?'
