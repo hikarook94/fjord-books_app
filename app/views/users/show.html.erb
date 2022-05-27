@@ -1,6 +1,12 @@
 <h1><%= t('views.common.title_show', name: User.model_name.human) %></h1>
 
 <p>
+  <% if @user.icon.representable? %>
+    <%= image_tag @user.icon.representation(resize_to_limit: [100, 100]) %>
+  <% end %>
+</p>
+
+<p>
   <strong><%= User.human_attribute_name(:email) %>:</strong>
   <%= @user.email %>
 </p>
