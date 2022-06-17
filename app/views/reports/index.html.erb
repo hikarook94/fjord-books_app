@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th><%= Report.human_attribute_name(:title)%></th>
-      <th><%= User.human_attribute_name(:name) %></th>
+      <th><%= User.model_name.human %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,7 +13,13 @@
     <% @reports.each do |report| %>
       <tr>
         <td><%= report.title %></td>
-        <td><%= report.user.name %></td>
+        <td>
+          <% if report.user.name.empty? %>
+            <%= report.user.email %>
+          <% else %>
+            <%= report.user.name %>
+          <% end %>
+        </td>
         <td><%= link_to t('views.common.show'), report %></td>
         <td>
           <% if report.user_id == current_user.id %>
@@ -21,7 +27,7 @@
           <% end %>
         </td>
         <td>
-          <% if report.user_id == current_user.id %>
+          <% if report.user == current_user %>
             <%= link_to t('views.common.destroy'), report, method: :delete, data: { confirm: t('views.common.delete_confirm') } %>
           <% end %>
         </td>
