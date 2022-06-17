@@ -12,7 +12,6 @@ class User < ApplicationRecord
 
   has_many :reports, dependent: :destroy
   has_many :comments, dependent: :destroy
-  # has_many :comments, as: :commentable, dependent: :destroy
 
   has_one_attached :avatar
 

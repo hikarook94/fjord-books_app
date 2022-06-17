@@ -19,8 +19,8 @@ module BooksApp
     config.time_zone = 'Asia/Tokyo'
     # config.eager_load_paths << Rails.root.join("extras")
     config.generators do |g|
-      g.assets     false
-      g.helper     false
+      g.assets false
+      g.helper false
     end
   end
 end
