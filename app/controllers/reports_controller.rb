@@ -2,14 +2,14 @@
 
 class ReportsController < ApplicationController
   before_action :set_report, only: %i[show edit update destroy]
+  before_action :screen_invalid_user, only: %i[edit update destroy]
 
   def index
     @reports = Report.order(:id).page(params[:page])
   end
 
   def show
-    @report = Report.find(params[:id])
-    @comments = @report.comments.includes(:user).all
+    @comments = @report.comments.includes(:user).order(:id)
     @comment = @report.comments.new
   end
 
@@ -40,6 +40,10 @@ class ReportsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_report
     @report = Report.find(params[:id])
+  end
+
+  def screen_invalid_user
+    redirect_to @report unless @report.user == current_user
   end
 
   # Only allow a list of trusted parameters through.
