@@ -22,7 +22,7 @@ class ReportsController < ApplicationController
   def create
     @report = current_user.reports.new(report_params)
     @report.save
-    redirect_to @report, notice: t('controllers.common.notice_create', name: Report.model_name.human) 
+    redirect_to @report, notice: t('controllers.common.notice_create', name: Report.model_name.human)
   end
 
   def update
