@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @commentable.comments.new(report_params)
-    @comment.user_id = current_user.id
+    @comment.user = current_user
     @comment.save
     redirect_to @commentable
   end
@@ -13,7 +13,11 @@ class CommentsController < ApplicationController
   private
 
   def set_commentable
-    @commentable = params.key?(:report_id) ? Report.find(params[:report_id]) : Book.find(params[:book_id])
+    @commentable = if params.key?(:report_id)
+                     Report.find(params[:report_id])
+                   elsif params.key?(:book_id)
+                     Book.find(params[:book_id])
+                   end
   end
 
   def report_params
