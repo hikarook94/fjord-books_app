@@ -4,12 +4,12 @@
   <p><%= t('comment.no_comments') %></p>
 <% else %>
   <% comments.each do |comment| %>
-  <div>
-    <div><%= comment.text %></div>
     <div>
-      <%= l comment.created_at, format: :long %>
-      <%= render 'users/name_or_email', user: comment.user %>
+      <div><%= comment.text %></div>
+      <div>
+        <%= l comment.created_at, format: :long %>
+        <%= comment.user.name_or_email %>
+      </div>
     </div>
-  </div>
   <% end %>
 <% end %>
