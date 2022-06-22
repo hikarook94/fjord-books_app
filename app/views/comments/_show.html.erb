@@ -1,0 +1,15 @@
+<h2><%= Comment.model_name.human %></h2>
+
+<% if comments.empty? %>
+  <p><%= t('comment.no_comments') %></p>
+<% else %>
+  <% comments.each do |comment| %>
+    <div>
+      <div><%= comment.text %></div>
+      <div>
+        <%= l comment.created_at, format: :long %>
+        <%= comment.user.name_or_email %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
