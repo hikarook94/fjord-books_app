@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+require 'date'
 
 class ReportTest < ActiveSupport::TestCase
   setup do
@@ -15,6 +16,6 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test '#created_on' do
-    assert_equal '2022-06-10', @report.created_on.to_s
+    assert_equal Date.parse('2022-06-10'), @report.created_on
   end
 end

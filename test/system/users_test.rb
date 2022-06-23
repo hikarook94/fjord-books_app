@@ -23,7 +23,7 @@ class UsersTest < ApplicationSystemTestCase
     visit root_url
     click_on 'アカウント登録'
 
-    fill_in 'Eメール', with: 'carol@example.com'
+    fill_in 'Eメール', with: 'dave@example.com'
     fill_in 'パスワード', with: 'password'
     fill_in 'パスワード（確認用）', with: 'password'
     click_button 'アカウント登録'
