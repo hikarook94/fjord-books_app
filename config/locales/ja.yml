@@ -226,3 +226,10 @@ ja:
       notice_create: "%{name}が作成されました。"
       notice_update: "%{name}が更新されました。"
       notice_destroy: "%{name}が削除されました。"
+  devise:
+    user_logged_in_as:
+      html: "<strong>%{user_name}</strong>でログイン中です。"
+    edit_profile: プロフィールを編集する
+    sign_up: アカウント登録
+    logout: ログアウト
+    login: ログイン
