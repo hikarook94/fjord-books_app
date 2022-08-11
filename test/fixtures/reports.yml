@@ -1,11 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: one
-  title: MyString
-  content: MyText
-
-two:
-  user: two
-  title: MyString
-  content: MyText
+alice_report:
+  user_id: 1
+  title: "A Title of Alice's Report"
+  content: "A Content of Alice's Report."
+  created_at: "2022-06-10 00:00:00 +0900"
